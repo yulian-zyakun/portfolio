@@ -7,10 +7,22 @@ export const data = {
     overview: "Here goes overview of my skillset.",
     education: [
       {
-        school: "University",
-        degree: "Masters",
+        school: "Red River College",
+        degree: "Diploma",
+        graduated: "2017",
+        program: "Business IT",
+      },
+      {
+        school: "National University Kyiv-Mohyla Academy",
+        degree: "Master's Degree in Finance",
         graduated: "2009",
-        program: "IT and Computing machines",
+        program: "Finance",
+      },
+      {
+        school: "Sumy Academy of Banking",
+        degree: "Specialist's Degree in Accounting",
+        graduated: "2007",
+        program: "Accounting and Audit",
       },
     ],
     work: [
