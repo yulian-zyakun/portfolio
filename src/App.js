@@ -20,9 +20,9 @@ function App() {
           <Route exact path="/" render={() => <Redirect to={"/about"} />} />
           <Route path="/about" render={() => <About data={data.about} />} />
           <Route path="/home" render={() => <About />} />
-          <Route path="/resume" render={() => <Resume />} />
-          <Route path="/portfolio" render={() => <Portfolio />} />
-          <Route path="/contact" render={() => <Contacts />} />
+          <Route path="/resume" render={() => <Resume data={data.resume} />} />
+          <Route path="/portfolio" render={() => <Portfolio data={data.portfolio} />} />
+          <Route path="/contact" render={() => <Contacts contacts={data.contacts} />} />
           <Route path="*" render={() => <div>Error 404 - Not Found</div>} />
         </Switch>
       </section>
