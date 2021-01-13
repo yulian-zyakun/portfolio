@@ -1,7 +1,8 @@
 export const data = {
   about: {
-    name: "Yulian Zyakun",
-    aboutMe: "Cool developer",
+    name: "My name is Yulian Zyakun",
+    aboutMe:
+      "I am a web developer. I am passionate about building web apps, creating websites and digital solutions. I enjoy learning new programming languages and coding techniques and look forward to growing my professionalism in software development and working in a thriving environment.",
   },
   resume: {
     overview: "Here goes overview of my skillset.",
@@ -91,8 +92,8 @@ export const data = {
       },
       {
         name: "Online Book Store",
-        description: "A learning project developed on Ruby on Rails",
-        image: "",
+        description: "A learning project developed with Ruby on Rails",
+        image: "bookstore.png",
         url: "",
         github: "https://github.com/yulian-zyakun/bookstore",
       },
@@ -107,11 +108,10 @@ export const data = {
   },
   contacts: {
     contactMessage: "You can reach me at...",
-    social:
-      {
-        linkedin: "https://linkedin.com/in/yulian-zyakun",
-        github: "https://github.com/yulian-zyakun",
-        email: "yulian.zyakun@gmail.com"
-      },
+    social: {
+      linkedin: "https://linkedin.com/in/yulian-zyakun",
+      github: "https://github.com/yulian-zyakun",
+      email: "yulian.zyakun@gmail.com",
+    },
   },
 };

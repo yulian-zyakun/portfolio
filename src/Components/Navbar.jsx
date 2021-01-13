@@ -5,7 +5,7 @@ const menu = ["About", "Resume", "Portfolio", "Contact"];
 
 const Navbar = () => {
   return (
-    <nav>
+    <nav className="flex">
       {menu.map((m) => (
         <NavItem key={m} menuItem={m} />
       ))}
@@ -15,14 +15,20 @@ const Navbar = () => {
 
 const NavItem = (props) => {
   return (
-    <div className="navItem">
-      <NavLink
-        to={`/${props.menuItem.toLowerCase()}`}
-        activeClassName="activeLink"
-      >
-        {props.menuItem}
-      </NavLink>
-    </div>
+    <a
+      href={`#${props.menuItem.toLowerCase()}`}
+      activeClassName="text-red-600 bg-green-100"
+      className="inline-flex items-center py-3 px-3 my-6 rounded text-red-200 hover:text-red-700 text-2xl font-bold"
+    >
+      {props.menuItem}
+    </a>
+    // <NavLink
+    //   to={`/${props.menuItem.toLowerCase()}`}
+    //   activeClassName="text-red-600 bg-green-100"
+    //   className="inline-flex items-center py-3 px-3 my-6 rounded text-red-200 hover:text-red-700 text-2xl font-bold"
+    // >
+    //   {props.menuItem}
+    // </NavLink>
   );
 };
 

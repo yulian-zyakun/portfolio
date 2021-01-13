@@ -1,6 +1,5 @@
 import { Redirect, Route, Switch } from "react-router-dom";
 import Header from "./Components/Header";
-import Navbar from "./Components/Navbar";
 import Footer from "./Components/Footer";
 import About from "./Components/About";
 import Resume from "./Components/Resume";
@@ -13,10 +12,13 @@ import { data } from "./Assets/appData";
 function App() {
   return (
     <div className="App">
-      <Header />
-      <Navbar />
+      <Header contacts={data.contacts} />
       <section>
-        <Switch>
+        <About data={data.about} />
+        <Portfolio data={data.portfolio} />
+        <Resume data={data.resume} />
+        <Contacts contacts={data.contacts} />
+        {/* <Switch>
           <Route exact path="/" render={() => <Redirect to={"/about"} />} />
           <Route path="/about" render={() => <About data={data.about} />} />
           <Route path="/home" render={() => <About />} />
@@ -24,9 +26,8 @@ function App() {
           <Route path="/portfolio" render={() => <Portfolio data={data.portfolio} />} />
           <Route path="/contact" render={() => <Contacts contacts={data.contacts} />} />
           <Route path="*" render={() => <div>Error 404 - Not Found</div>} />
-        </Switch>
+        </Switch> */}
       </section>
-      <Aside />
       <Footer />
     </div>
   );

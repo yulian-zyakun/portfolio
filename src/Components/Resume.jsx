@@ -1,16 +1,26 @@
 const Resume = ({ data }) => {
   return (
-    <div className="">
-      <h3>Resume Section</h3>
-      <div>Overview: {data.overview}</div>
-      <br/>
-      <div>Professional Skills</div>
+    <div id="resume" className="container mx-auto py-7">
+      <h1 className="text-4xl text-gray-700 flex justify-center">My Resume</h1>
+      <div className="text-2xl text-gray-600 flex justify-center py-6">
+        Overview: {data.overview}
+      </div>
+      <br />
+      <div className="text-2xl text-gray-600 flex justify-center py-6">
+        Professional Skills
+      </div>
       <div>
         <ul>
-        {data.skills.map((skill, id) => (<li key={id}><b>{skill.name}</b> {skill.level}</li>))}
+          {data.skills.map((skill, id) => (
+            <li key={id}>
+              <b>{skill.name}</b> {skill.level}
+            </li>
+          ))}
         </ul>
       </div>
-      <div>Work Experience:</div>
+      <div className="text-2xl text-gray-600 flex justify-center py-6">
+        Work Experience
+      </div>
       <div>
         {data.work.map((w, id) => {
           return (
@@ -23,7 +33,9 @@ const Resume = ({ data }) => {
           );
         })}
       </div>
-      <div>Education:</div>
+      <div className="text-2xl text-gray-600 flex justify-center py-6">
+        Education
+      </div>
       <div>
         {data.education.map((edu, id) => {
           return (
@@ -36,7 +48,6 @@ const Resume = ({ data }) => {
           );
         })}
       </div>
-
     </div>
   );
 };

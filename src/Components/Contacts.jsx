@@ -1,8 +1,12 @@
 const Contacts = ({ contacts }) => {
   return (
-    <div className="">
-      <h3>Contacts Section</h3>
-      <div>{contacts.contactMessage}</div>
+    <div id="contact" className="container mx-auto py-7">
+      <h1 className="text-4xl text-gray-700 flex justify-center">
+        My Contacts
+      </h1>
+      <div className="text-2xl text-gray-600 flex justify-center py-6">
+        {contacts.contactMessage}
+      </div>
       <div>
         <ul>
           {Object.keys(contacts.social).map((key) => (

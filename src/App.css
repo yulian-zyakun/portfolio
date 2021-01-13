@@ -38,32 +38,32 @@
 } */
 
 .App {
-  font-family: segoe-ui_normal, Segoe UI, Segoe, Segoe WP, Helvetica Neue,
-    Helvetica, sans-serif;
+  /* font-family: segoe-ui_normal, Segoe UI, Segoe, Segoe WP, Helvetica Neue,
+    Helvetica, sans-serif; */
   display: grid;
   grid-template-areas:
     "header header header"
-    "nav section aside"
+    "section section section"
     "footer footer footer";
   grid-template-rows: 80px 1fr 50px;
   grid-template-columns: 15% 1fr 18%;
-  grid-gap: 5px;
+  grid-gap: 0px;
   height: 100vh;
 }
 
 header {
-  background: #707070;
+  background: white;
   grid-area: header;
 }
 
-nav {
+/* nav {
   background: #c9bfbf;
   grid-area: nav;
   text-align: right;
-}
+} */
 
 section {
-  background: #ababab;
+  background: white;
   grid-area: section;
 }
 
@@ -77,22 +77,22 @@ footer {
   grid-area: footer;
 }
 
-header,
+/* header,
 nav,
 section,
 aside,
 footer {
   padding: 15px;
-}
+} */
 
-.navItem a {
+/* .navItem a {
   color: grey;
   text-decoration: none;
 }
 
 .navItem a.activeLink {
   color: brown;
-}
+} */
 
 .App-logo {
   object-fit: cover;
@@ -100,6 +100,13 @@ footer {
   max-height: 100%;
 }
 
-.project {
+/* .portfolioSection {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+} */
+
+/* .project {
   padding: 30px;
-}
+  text-align: center;
+} */
