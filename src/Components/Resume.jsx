@@ -9,11 +9,12 @@ const Resume = ({ data }) => {
       <div className="text-2xl text-gray-600 flex justify-center py-6">
         Professional Skills
       </div>
-      <div>
+      <div className="text-lg">
         <ul>
           {data.skills.map((skill, id) => (
             <li key={id}>
-              <b>{skill.name}</b> {skill.level}
+              <span className="text-green-700 font-bold">{skill.name}</span>{" "}
+              <span className="text-green-500 font-bold">{skill.level}</span>
             </li>
           ))}
         </ul>
@@ -21,14 +22,28 @@ const Resume = ({ data }) => {
       <div className="text-2xl text-gray-600 flex justify-center py-6">
         Work Experience
       </div>
-      <div>
+      <div className="text-lg text-gray-800 flex justify-between px-2">
         {data.work.map((w, id) => {
           return (
             <ul key={id}>
-              <li>Company: {w.company}</li>
-              <li>Position: {w.role}</li>
-              <li>Years: {w.years}</li>
-              <li>Description: {w.description}</li>
+              <li>
+                Company {" - "}
+                <span className="text-green-700 font-bold">{w.company}</span>
+              </li>
+              <li>
+                Position:{" "}
+                <span className="text-green-600 font-bold">{w.role}</span>
+              </li>
+              <li>
+                Years:{" "}
+                <span className="text-green-600 font-bold">{w.years}</span>
+              </li>
+              <li>
+                Description:{" "}
+                <span className="text-green-600 font-bold">
+                  {w.description}
+                </span>
+              </li>
             </ul>
           );
         })}
@@ -36,14 +51,28 @@ const Resume = ({ data }) => {
       <div className="text-2xl text-gray-600 flex justify-center py-6">
         Education
       </div>
-      <div>
+      <div className="text-lg text-gray-800 flex justify-between">
         {data.education.map((edu, id) => {
           return (
             <ul key={id}>
-              <li>School: {edu.school}</li>
-              <li>Degree: {edu.degree}</li>
-              <li>Graduation: {edu.graduated}</li>
-              <li>Program: {edu.program}</li>
+              <li>
+                School{" - "}
+                <span className="text-green-700 font-bold">{edu.school}</span>
+              </li>
+              <li>
+                Degree:{" "}
+                <span className="text-green-600 font-bold">{edu.degree}</span>
+              </li>
+              <li>
+                Graduation:{" "}
+                <span className="text-green-600 font-bold">
+                  {edu.graduated}
+                </span>
+              </li>
+              <li>
+                Program:{" "}
+                <span className="text-green-600 font-bold">{edu.program}</span>
+              </li>
             </ul>
           );
         })}

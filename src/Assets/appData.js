@@ -86,7 +86,7 @@ export const data = {
       {
         name: "Social Network",
         description: "A learning project built with ReactJS and Redux",
-        image: "",
+        image: "social_network.png",
         url: "",
         github: "https://github.com/yulian-zyakun/react-social-network",
       },
@@ -107,7 +107,8 @@ export const data = {
     ],
   },
   contacts: {
-    contactMessage: "You can reach me at...",
+    contactMessage:
+      "You can find me on social networks, check my repositories on Github or shoot me an email",
     social: {
       linkedin: "https://linkedin.com/in/yulian-zyakun",
       github: "https://github.com/yulian-zyakun",

@@ -1,3 +1,4 @@
+import { SocialIcon } from "react-social-icons";
 const Contacts = ({ contacts }) => {
   return (
     <div id="contact" className="container mx-auto py-7">
@@ -7,10 +8,18 @@ const Contacts = ({ contacts }) => {
       <div className="text-2xl text-gray-600 flex justify-center py-6">
         {contacts.contactMessage}
       </div>
-      <div>
+      <div className="text-2xl text-gray-600 flex justify-center py-6">
         <ul>
           {Object.keys(contacts.social).map((key) => (
-            <li key={key}>{`${key}: ${contacts.social[key]}`}</li>
+            <li key={key}>
+              <SocialIcon
+                url={contacts.social[key]}
+                className="m-2"
+                target="_blank"
+                fgColor="#fff"
+              />
+              {contacts.social[key]}
+            </li>
           ))}
         </ul>
       </div>

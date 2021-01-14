@@ -1,5 +1,5 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 
 const menu = ["About", "Resume", "Portfolio", "Contact"];
 
@@ -17,8 +17,7 @@ const NavItem = (props) => {
   return (
     <a
       href={`#${props.menuItem.toLowerCase()}`}
-      activeClassName="text-red-600 bg-green-100"
-      className="inline-flex items-center py-3 px-3 my-6 rounded text-red-200 hover:text-red-700 text-2xl font-bold"
+      className="inline-flex items-center py-3 px-3 my-6 text-green-200 hover:text-green-900 text-2xl font-bold"
     >
       {props.menuItem}
     </a>
