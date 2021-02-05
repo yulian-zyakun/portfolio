@@ -1,77 +1,71 @@
 const Resume = ({ data }) => {
   return (
     <div id="resume" className="container mx-auto py-7">
-      <h1 className="text-4xl text-gray-700 flex justify-center">My Resume</h1>
-      <div className="text-2xl text-gray-600 flex justify-center py-6">
-        Overview: {data.overview}
+      <div className="divider div-transparent"></div>
+      <h1 className="text-4xl greenText flex justify-center">My Resume</h1>
+      <div className="text-2xl greenText flex justify-center py-6">
+        My full resume is available{" "}
+        <a
+          href="portfolio/YZResume.pdf"
+          target="_blank"
+          rel="noreferrer"
+          className="greenText px-3 hover:text-green-500"
+        >
+          here
+        </a>
       </div>
-      <br />
-      <div className="text-2xl text-gray-600 flex justify-center py-6">
+      <div className="text-2xl greenText flex justify-center py-6">
         Professional Skills
       </div>
       <div className="text-lg">
         <ul>
           {data.skills.map((skill, id) => (
             <li key={id}>
-              <span className="text-green-700 font-bold">{skill.name}</span>{" "}
-              <span className="text-green-500 font-bold">{skill.level}</span>
+              <span className="greenText font-bold">{skill.name}</span>{" "}
+              <span className="greenText">{skill.level}</span>
             </li>
           ))}
         </ul>
       </div>
-      <div className="text-2xl text-gray-600 flex justify-center py-6">
+      <div className="text-2xl greenText flex justify-center py-6">
         Work Experience
       </div>
-      <div className="text-lg text-gray-800 flex justify-between px-2">
+      <div className="text-lg flex justify-between px-2">
         {data.work.map((w, id) => {
           return (
             <ul key={id}>
               <li>
-                Company {" - "}
-                <span className="text-green-700 font-bold">{w.company}</span>
+                <span className="greenText font-bold">{w.company}</span>
               </li>
               <li>
-                Position:{" "}
-                <span className="text-green-600 font-bold">{w.role}</span>
-              </li>
-              <li>
-                Years:{" "}
-                <span className="text-green-600 font-bold">{w.years}</span>
-              </li>
-              <li>
-                Description:{" "}
-                <span className="text-green-600 font-bold">
-                  {w.description}
+                <span className="greenText font-bold">
+                  {w.role} {w.years}
                 </span>
+              </li>
+              <li>
+                <span className="greenText">{w.description}</span>
               </li>
             </ul>
           );
         })}
       </div>
-      <div className="text-2xl text-gray-600 flex justify-center py-6">
+      <div className="text-2xl greenText flex justify-center py-6">
         Education
       </div>
-      <div className="text-lg text-gray-800 flex justify-between">
+      <div className="text-lg greenText flex justify-between">
         {data.education.map((edu, id) => {
           return (
             <ul key={id}>
               <li>
-                School{" - "}
-                <span className="text-green-700 font-bold">{edu.school}</span>
+                <span className="greenText font-bold">{edu.school}</span>
               </li>
               <li>
-                Degree:{" "}
-                <span className="text-green-600 font-bold">{edu.degree}</span>
-              </li>
-              <li>
-                Graduation:{" "}
-                <span className="text-green-600 font-bold">
-                  {edu.graduated}
+                <span className="greenText font-bold">
+                  {edu.degree} ({edu.graduated})
                 </span>
               </li>
               <li>
-                Program:{" "}
-                <span className="text-green-600 font-bold">{edu.program}</span>
+                <span className="greenText">{edu.major}</span>
               </li>
             </ul>
           );

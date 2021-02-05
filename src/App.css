@@ -110,3 +110,33 @@ footer {
   padding: 30px;
   text-align: center;
 } */
+
+.divider {
+  position: relative;
+  margin: 30px;
+  height: 3px;
+}
+
+.div-transparent:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 5%;
+  right: 5%;
+  width: 90%;
+  height: 1px;
+  background-image: linear-gradient(
+    to right,
+    transparent,
+    rgb(8, 55, 88),
+    transparent
+  );
+}
+
+.blueBg {
+  background: #083758;
+}
+
+.greenText {
+  color: #136571;
+}

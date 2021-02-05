@@ -17,7 +17,7 @@ const NavItem = (props) => {
   return (
     <a
       href={`#${props.menuItem.toLowerCase()}`}
-      className="inline-flex items-center py-3 px-3 my-6 text-green-200 hover:text-green-900 text-2xl font-bold"
+      className="inline-flex items-center py-3 px-3 my-6 text-blue-50 hover:text-green-500 text-2xl font-bold"
     >
       {props.menuItem}
     </a>
